@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Analysis</title>
+    <script>
+      function analyzeText() {
+        // Get the text entered by the user
+        var text = document.getElementById("textInput").value;
+
+        // Count characters, lines, and words
+        var charCount = text.length;
+        var lineCount = text.split(/\r\n|\r|\n/).length;
+        var wordCount = text.match(/\S+/g).length;
+
+        // Display the results in an alert message
+        alert(
+          "Character Count: " +
+            charCount +
+            "\nLine Count: " +
+            lineCount +
+            "\nWord Count: " +
+            wordCount
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Text Analysis</h1>
+    <label for="textInput">Enter Text:</label>
+    <textarea id="textInput" rows="5" cols="40"></textarea>
+    <br />
+    <button onclick="analyzeText()">Submit</button>
+  </body>
+</html>

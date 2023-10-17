@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Animation</title>
+    <style>
+      #animatedText {
+        font-size: 5pt;
+        color: red;
+      }
+    </style>
+    <script>
+      var growing = true;
+
+      function animateText() {
+        var textElement = document.getElementById("animatedText");
+        var currentSize = parseInt(getComputedStyle(textElement).fontSize, 10);
+
+        if (growing) {
+          if (currentSize < 50) {
+            currentSize += 1;
+            textElement.style.fontSize = currentSize + "pt";
+          } else {
+            textElement.style.color = "blue";
+            textElement.textContent = "TEXT- SHRINKING";
+            growing = false;
+          }
+        } else {
+          if (currentSize > 5) {
+            currentSize -= 1;
+            textElement.style.fontSize = currentSize + "pt";
+          }
+        }
+      }
+
+      setInterval(animateText, 100);
+    </script>
+  </head>
+  <body>
+    <h1>Text Animation</h1>
+    <div id="animatedText">TEXT- GROWING</div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Frame Form Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        frame {
+            border: 1px solid #ccc;
+            width: 50%;
+            height: 100%;
+        }
+
+        #formFrame {
+            background: #f5f5f5;
+        }
+
+        #resultFrame {
+            background: #eee;
+        }
+    </style>
+</head>
+<frameset cols="50%,50%">
+    <frame src="form.html" name="formFrame" id="formFrame">
+    <frame src="result.html" name="resultFrame" id="resultFrame">
+</frameset>
+</html>

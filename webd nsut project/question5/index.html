@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Squares and Cubes Table</title>
+    <script>
+      function calculateSquaresAndCubes() {
+        var resultTable =
+          "<table border='1'><tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+
+        for (var i = 0; i <= 10; i++) {
+          var square = i * i;
+          var cube = i * i * i;
+          resultTable +=
+            "<tr><td>" +
+            i +
+            "</td><td>" +
+            square +
+            "</td><td>" +
+            cube +
+            "</td></tr>";
+        }
+
+        resultTable += "</table>";
+        document.getElementById("result").innerHTML = resultTable;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Squares and Cubes Table</h1>
+    <button onclick="calculateSquaresAndCubes()">Calculate</button>
+    <div id="result"></div>
+  </body>
+</html>
