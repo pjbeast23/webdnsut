@@ -24,8 +24,10 @@
 
       // Function to demonstrate both problems
       function demonstrateProblems() {
-        var stringInput = "Hello, World!";
-        var numberInput = 12345;
+        var stringInput = document.getElementById("inputString").value;
+        var numberInput = parseFloat(
+          document.getElementById("inputNumber").value
+        );
 
         var positionOfVowel = findLeftmostVowelPosition(stringInput);
         var reversedNumber = reverseDigits(numberInput);
@@ -42,6 +44,12 @@
   </head>
   <body>
     <h1>JavaScript Functions</h1>
+    <label for="inputString">Enter a String:</label>
+    <input type="text" id="inputString" /><br />
+
+    <label for="inputNumber">Enter a Number:</label>
+    <input type="number" id="inputNumber" /><br />
+
     <button onclick="demonstrateProblems()">Solve Problems</button>
   </body>
 </html>
